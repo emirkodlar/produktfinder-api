@@ -1,7 +1,8 @@
-
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # CORS desteği
 
 app = Flask(__name__)
+CORS(app)  # Tüm domainlere istek izni verir
 
 @app.route("/produktfinder", methods=["POST"])
 def produktfinder():
